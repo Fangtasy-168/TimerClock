@@ -1,0 +1,127 @@
+:root {
+  --main-background: #7c583b;
+  --secondary-background:#ab7a63;
+  --third-background: #c5b7ad;
+  --water: #8ba1af;
+  --water2: #6a9ca1;
+  --water3:#194e50;
+}
+
+html {
+  height: 100%;
+  width: 100%;
+  font-size: 19px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: rgb(255, 255, 255);
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  background: linear-gradient(0deg, rgb(25, 78, 80) 9%, rgb(106, 156, 161) 19%, rgb(139, 161, 175) 29%, rgb(197, 183, 173) 46%, rgb(171, 122, 99) 74%, rgb(124, 88, 59) 90%);
+  overflow: hidden;
+}
+
+body {
+  height: 100%;
+  width: 100%;
+  padding: 0;
+  margin: 0 auto;
+  text-align: center;
+}
+
+#app-container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+#app {
+  min-width: 550px;
+  margin: 20px auto;
+}
+
+#timer-container {
+  display: flex;
+}
+
+.timer {
+  width: 100%;
+}
+
+.controls {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+#display-wrapper {
+  max-width: 250px;
+  margin: 10px auto;
+}
+
+#timer-label {
+  font-size: 1.5em;
+}
+
+#time-left {
+  text-align: center;
+  font-size: 3em;
+}
+
+#console {
+  display: flex;
+  margin: 0 auto;
+  justify-content: space-around;
+  max-width: 250px;
+  font-size: 1.5rem;
+}
+
+svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  z-index: -10;
+}
+
+#outline {
+  stroke-width: 0.5;
+  stroke-linecap: round;
+  stroke: rgba(197, 183, 173, 0.5215686275);
+  stroke-dasharray: 18;
+  stroke-dashoffset: 0;
+  animation: hourglassAnimation 1.5s linear forwards;
+}
+
+#sand {
+  fill: rgba(124, 88, 59, 0.5215686275);
+  animation: sandFillAnimation 2s linear forwards;
+}
+
+@keyframes sandFillAnimation {
+  0% {
+    fill: rgba(124, 88, 59, 0); /* Transparent at the start */
+  }
+  100% {
+    fill: rgba(124, 88, 59, 0.5215686275); /* Fully filled */
+  }
+}
+@keyframes hourglassAnimation {
+  0% {
+    stroke-dashoffset: 18;
+  }
+  25% {
+    stroke-dashoffset: 13.5;
+  }
+  50% {
+    stroke-dashoffset: 9;
+  }
+  75% {
+    stroke-dashoffset: 4.5;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}/*# sourceMappingURL=styles.css.map */

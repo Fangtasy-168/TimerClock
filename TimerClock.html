@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/03411ac46f.js" crossorigin="anonymous"></script>
+    <title>Timer-Clock</title>
+    <link rel="stylesheet" href = "App/SCSS/styles.css">
+</head>
+<body>
+    <div id = "app-container">
+        <h1>Sands of Fangtasy</h1>
+        <div id="app">
+            <div id = "timer-container">
+                <div id = "break-timer" class = "timer"> 
+                    <div id="break-label">Break Length</div>
+                    <div class = "controls">
+                        <div id = break-decrement class = "modify"><i class="fa-solid fa-chevron-down"></i></div>
+                        <div id="break-length">5</div>
+                        <div id = break-increment class = "modify"><i class="fa-solid fa-chevron-up"></i></div>
+                    </div>
+                </div>
+                <div id = "session-timer" class = "timer">
+                    <div id="session-label">Session Length</div>
+                        <div class="controls">
+                            <div id = session-decrement class = "modify"><i class="fa-solid fa-chevron-down"></i></div>
+                            <div id="session-length">25</div>
+                            <div id = session-increment class = "modify"><i class="fa-solid fa-chevron-up"></i></div>
+                        </div>
+                </div>            
+            </div>
+            <div id="display-wrapper">
+                <div id="timer-label">Break || Session</div>
+                <div id="time-left">MM:SS</div>
+            </div>
+            <div id="console">
+                <div id="start_stop"><i class="fa-solid fa-hourglass-end"></i></div>
+                <div id="reset"><i class="fa-solid fa-arrows-rotate"></i></div>
+            </div>
+        </div>
+        <footer id="author">Made by Tony Fang</footer>
+    </div>
+    <audio id="beep" preload="auto" src="https://cdn.freecodecamp.org/testable-projects-fcc/audio/BeepSound.wav"></audio>
+    <svg
+    width="516.66669"
+    height="583.33331"
+    viewBox="0 0 15.500001 17.499999"
+    fill="none"
+    version="1.1"
+    id="svg2"
+    sodipodi:docname="hourglass-svgrepo-com.svg"
+    inkscape:export-filename="hourglass-svgrepo-comtest.svg"
+    inkscape:export-xdpi="96"
+    inkscape:export-ydpi="96"
+    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+    xmlns="http://www.w3.org/2000/svg"
+    xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview2"
+     pagecolor="#505050"
+     bordercolor="#ffffff"
+     borderopacity="1"
+     inkscape:showpageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="1"
+     inkscape:deskcolor="#505050" />
+     <path
+     d="m 12.75,0.75 v 2.89445 c 0,0.39485 -0.1169,0.78086 -0.3359,1.1094 L 10.4896,7.6406 c -0.4479,0.6718 -0.4479,1.547 0,2.2188 l 1.9245,2.8868 c 0.219,0.3285 0.3359,0.7145 0.3359,1.1094 V 16.75 m 0,-16 h 2 m -2,0 h -10 m 10,16 h 2 m -2,0 h -10 m 0,-16 v 2.89445 c 0,0.39485 0.11688,0.78086 0.3359,1.1094 L 5.0104,7.6406 c 0.44787,0.6718 0.44787,1.547 0,2.2188 L 3.0859,12.7462 C 2.86688,13.0747 2.75,13.4607 2.75,13.8556 V 16.75 m 0,-16 h -2 m 2,16 h -2"
+     
+     id="outline"
+      />
+    <path
+     
+     d="M 3.5312349,14.7675 3.54,13.545 3.6176265,13.38 C 3.6603213,13.28925 4.1672985,12.506209 4.7442423,11.63991 6.0626835,9.6602289 6.0889203,9.6033489 6.0864774,8.73 6.0853104,8.3125089 6.0768867,8.2377636 6.004038,7.9984218 5.9594115,7.8518037 5.8872441,7.6564749 5.8436655,7.5643575 5.8000872,7.4722404 5.2837953,6.6742008 4.69635,5.790936 3.9652203,4.6916316 3.6119787,4.1342259 3.5766339,4.0240548 3.531387,3.8830182 3.525,3.7169556 3.525,2.6815549 V 1.5 h 4.23 4.23 v 1.1518399 c 0,1.0787963 -0.0039,1.1645462 -0.06189,1.3522079 -0.05084,0.1645827 -0.248833,0.4809327 -1.108632,1.7713047 -0.575709,0.8640156 -1.0862739,1.649397 -1.1345877,1.7452923 -0.3723147,0.7389843 -0.3741327,1.7106603 -0.00457,2.4435714 0.064546,0.1280068 0.5793417,0.9253008 1.1439917,1.7717618 0.564649,0.846462 1.054547,1.606522 1.088661,1.689022 0.0586,0.141719 0.06253,0.216666 0.0711,1.3575 l 0.0091,1.2075 H 7.7553045 3.5224698 Z"
+     id="sand" />
+    </svg>
+</body>
+<script src="App/JS/TimerClock.js"></script>
+<script src = "https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+</html>
