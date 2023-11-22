@@ -2,45 +2,45 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://kit.fontawesome.com/03411ac46f.js" crossorigin="anonymous"></script>
+    <meta name = "viewport" content="width=device-width, initial-scale=1.0">
+    <script src = "https://kit.fontawesome.com/03411ac46f.js" crossorigin="anonymous"></script>
     <title>Timer-Clock</title>
-    <link rel="stylesheet" href = "App/SCSS/styles.css">
+    <link rel = "stylesheet" href = "App/SCSS/styles.css">
 </head>
 <body>
     <div id = "app-container">
         <h1>Sands of Fangtasy</h1>
-        <div id="app">
+        <div id = "app">
             <div id = "timer-container">
                 <div id = "break-timer" class = "timer"> 
-                    <div id="break-label">Break Length</div>
+                    <div id = "break-label">Break Length</div>
                     <div class = "controls">
-                        <div id = break-decrement class = "modify"><i class="fa-solid fa-chevron-down"></i></div>
-                        <div id="break-length">5</div>
-                        <div id = break-increment class = "modify"><i class="fa-solid fa-chevron-up"></i></div>
+                        <div id = "break-decrement" class = "modify"><i class="fa-solid fa-chevron-down"></i></div>
+                        <div id = "break-length">5</div>
+                        <div id = "break-increment" class = "modify"><i class="fa-solid fa-chevron-up"></i></div>
                     </div>
                 </div>
                 <div id = "session-timer" class = "timer">
-                    <div id="session-label">Session Length</div>
+                    <div id= "session-label">Session Length</div>
                         <div class="controls">
-                            <div id = session-decrement class = "modify"><i class="fa-solid fa-chevron-down"></i></div>
-                            <div id="session-length">25</div>
-                            <div id = session-increment class = "modify"><i class="fa-solid fa-chevron-up"></i></div>
+                            <div id = "session-decrement" class = "modify"><i class="fa-solid fa-chevron-down"></i></div>
+                            <div id = "session-length">25</div>
+                            <div id = "session-increment" class = "modify"><i class="fa-solid fa-chevron-up"></i></div>
                         </div>
                 </div>            
             </div>
             <div id="display-wrapper">
-                <div id="timer-label">Break || Session</div>
-                <div id="time-left">MM:SS</div>
+                <div id = "timer-label">Break || Session</div>
+                <div id = "time-left">00:00</div>
             </div>
             <div id="console">
-                <div id="start_stop"><i class="fa-solid fa-hourglass-end"></i></div>
-                <div id="reset"><i class="fa-solid fa-arrows-rotate"></i></div>
+                <div id = "start_stop"><i class="fa-solid fa-hourglass-end"></i></div>
+                <div id = "reset"><i class="fa-solid fa-arrows-rotate"></i></div>
             </div>
         </div>
-        <footer id="author">Made by Tony Fang</footer>
+        <footer id = "author">Made by Tony Fang</footer>
     </div>
-    <audio id="beep" preload="auto" src="https://cdn.freecodecamp.org/testable-projects-fcc/audio/BeepSound.wav"></audio>
+    <audio id = "beep" preload="auto" src="https://cdn.freecodecamp.org/testable-projects-fcc/audio/BeepSound.wav"></audio>
     <svg
     width="516.66669"
     height="583.33331"
@@ -76,6 +76,6 @@
      id="sand" />
     </svg>
 </body>
-<script src="App/JS/TimerClock.js"></script>
+<script defer src="App/JS/TimerClock.js"></script>
 <script src = "https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
 </html>
