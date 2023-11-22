@@ -17,31 +17,26 @@ let beep = document.querySelector("#beep")
 document.addEventListener("DOMContentLoaded", () => {
     timeDisplay()
 })
-
-start.addEventListener("click", () => {
-    started == true ? started = false : started = true
-    ticking()
-})
-
 sessionIncrement.addEventListener("click", testupDown)
 sessionDecrement.addEventListener("click", testupDown)
 breakIncrement.addEventListener("click", testupDown)
 breakDecrement.addEventListener("click", testupDown)
 
-
-function testupDown(e) {
-    if (e.currentTarget.getAttribute("id").includes("decrement") && e.currentTarget.nextElementSibling.textContent > 1) {
-        e.currentTarget.nextElementSibling.textContent = Number(e.currentTarget.nextElementSibling.textContent) - 1
-    }
-    else if (e.currentTarget.getAttribute("id").includes("increment") && e.currentTarget.previousElementSibling.textContent < 60) {
-        e.currentTarget.previousElementSibling.textContent = Number(e.currentTarget.previousElementSibling.textContent) + 1
-    }
-    timeRemaining = Number(session.textContent) * 60000
-    timeDisplay()
-}
+start.addEventListener("click", () => {
+    started == true ? started = false : started = true
+    start.classList.toggle("default")
+    start.classList.toggle("rotate")
+    ticking()
+})
 
 reset.addEventListener("click", () => {
     clearInterval(nIntervId)
+    reset.classList.add("rotate")
+    reset.addEventListener("transitionend", () => {
+        reset.classList.remove("rotate")
+    }, { once: true })
+    start.classList = "default"
+
     started = false
     cycle = session
     rest.textContent = 5
@@ -52,6 +47,17 @@ reset.addEventListener("click", () => {
     beep.pause()
     beep.currentTime = 0
 })
+// Update timer length function
+function testupDown(e) {
+    if (e.currentTarget.getAttribute("id").includes("decrement") && e.currentTarget.nextElementSibling.textContent > 1) {
+        e.currentTarget.nextElementSibling.textContent = Number(e.currentTarget.nextElementSibling.textContent) - 1
+    }
+    else if (e.currentTarget.getAttribute("id").includes("increment") && e.currentTarget.previousElementSibling.textContent < 60) {
+        e.currentTarget.previousElementSibling.textContent = Number(e.currentTarget.previousElementSibling.textContent) + 1
+    }
+    timeRemaining = Number(session.textContent) * 60000
+    timeDisplay()
+}
 
 let nIntervId
 let cycle = session

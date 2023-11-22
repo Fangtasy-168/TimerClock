@@ -76,6 +76,23 @@ body {
   max-width: 250px;
   font-size: 1.5rem;
 }
+#console .fa-solid:active {
+  transform: rotate(180);
+}
+
+.fa-solid:hover {
+  color: #7c583b;
+}
+
+.rotate {
+  transition: 1s ease-in-out;
+  transform: rotate(180deg);
+}
+
+.default {
+  transition: transform 1s ease-in-out;
+  transform: rotate(0deg);
+}
 
 svg {
   position: absolute;
