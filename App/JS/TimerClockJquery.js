@@ -83,7 +83,7 @@ function ticking() {
                 setTimeout(() => {
                     cycle = cycle == session ? rest : session
                     ticking()
-                }, 1000)
+                }, 500)
             } else {
                 timeDisplay()
             }
