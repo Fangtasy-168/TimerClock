@@ -11,7 +11,7 @@ let sessionIncrement = $("#session-increment")
 let sessionDecrement = $("#session-decrement")
 let breakIncrement = $("#break-increment")
 let breakDecrement = $("#break-decrement")
-let beep = $("#beep")
+let beep = document.querySelector("#beep")
 
 
 //Event Listeners
