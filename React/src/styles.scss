@@ -1,0 +1,75 @@
+body{
+    height: 100vh;
+    width: 100vw;
+    box-sizing: border-box;
+    margin: 0;
+    caret-color: transparent;
+    background: radial-gradient(circle, rgba(64,63,63,1) 8%, rgba(0,0,0,1) 100%);
+    background-size: 200% 200%;
+    background-position: 50% 100%;
+    // animation: gradient linear infinite 5s;
+}
+#root{
+    height: 100vh;
+    width: 650px;
+    display: flex;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+#heading{
+    font-size: 2em;
+    margin-block-start: 0.67em;
+    margin-block-end: 0.67em;
+    font-weight: bold;
+}
+#timer-container{
+    display: flex;
+    text-align: center;
+    font-size: 1.3rem;
+    width: 50%;
+}
+#display-container{
+    text-align: center;
+    font-size: 1.5rem;
+}
+#console{
+    display: flex;
+    justify-content: space-around;
+    margin: 0 auto;
+    width: 250px;
+    font-size: 2rem;
+}
+
+.timer{
+    width: 100%
+}
+.timer-controls{
+    display: flex;
+    div{
+        flex: 1
+    } 
+}
+
+
+@keyframes gradient {
+    0% {
+      background-position: 50% 100%;
+    }
+    20% {
+      background-position: 50% 92%;
+    }
+    40% {
+      background-position: 50% 84%;
+    }
+    60% {
+      background-position: 50% 76%;
+    }
+    80% {
+      background-position: 50% 68%;
+    }
+    100% {
+      background-position: 50% 60%;
+    }
+  }
